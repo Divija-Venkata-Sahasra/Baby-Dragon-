@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Flight - Flappy Bird + Snake Mashup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-overlay">
+            <div id="score-display">
+                <div class="score-item">Score: <span id="current-score">0</span></div>
+                <div class="score-item">High Score: <span id="high-score">0</span></div>
+            </div>
+            
+            <div id="evolution-display">
+                <span id="evolution-stage">Baby Dragon</span>
+            </div>
+            
+            <div id="ability-display">
+                <div class="ability" id="fire-ability">
+                    <span class="ability-key">F</span>
+                    <span class="ability-name">Fire Breath</span>
+                    <div class="ability-cooldown" id="fire-cooldown"></div>
+                </div>
+                <div class="ability" id="shield-ability">
+                    <span class="ability-key">S</span>
+                    <span class="ability-name">Shield</span>
+                    <div class="ability-cooldown" id="shield-cooldown"></div>
+                </div>
+            </div>
+            
+            <div id="powerup-display"></div>
+        </div>
+        
+        <div id="game-over" class="hidden">
+            <h1>Game Over!</h1>
+            <p>Your Score: <span id="final-score">0</span></p>
+            <p>High Score: <span id="final-high-score">0</span></p>
+            <button id="restart-btn">Restart Game</button>
+        </div>
+        
+        <div id="start-screen">
+            <h1>Dragon Flight</h1>
+            <p>Press SPACE or Click to Fly</p>
+            <p>F - Fire Breath | S - Shield</p>
+            <p>Collect gems to grow your tail!</p>
+            <button id="start-btn">Start Game</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
